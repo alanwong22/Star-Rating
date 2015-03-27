@@ -1,0 +1,16 @@
+<div class="breakdown-wrapper">
+	
+	<div class="breakdown-container" ng-repeat='b in breakdown track by $index'>
+		<div class="box-copy bold">{{breakdown.length - $index}} stars</div>
+		<div class="box">
+			<div class="breakdown-fill"></div>
+		</div>
+		<div class="box-copy">({{b}})</div>
+	</div>
+
+	<div class="filter-title">Filter By Number of Stars:</div>
+	<div class="breakdown-container" ng-repeat='b in breakdown track by $index'>
+		<div class="box-copy link" ng-click="filterReviews(breakdown.length - $index)">{{breakdown.length - $index}} star<div class="inline" ng-show="(breakdown.length - $index) > 1">s</div></div>
+		<div class="box-copy">({{b}})</div>
+	</div>
+</div>

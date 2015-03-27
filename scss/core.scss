@@ -1,0 +1,24 @@
+/* VARIABLES */
+
+/*  BAR CHART COLOR  */
+$starColor: #ffcc33;
+
+/* BASE */
+html,body {
+	width: 100%;
+	height: 120%;
+}
+
+/* HELPERS */
+.center {
+  text-align: center;
+}
+
+.link {
+  color: blue;
+  cursor: pointer;
+}
+
+.inline {
+  display: inline !important;
+}

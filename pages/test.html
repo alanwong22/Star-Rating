@@ -1,0 +1,18 @@
+<div class="header-container">HEADER</div>
+<div class="row">
+	<div class="review-results col-xs-12 col-sm-5 col-md-4">
+			<div class="results-wrapper">
+				<div class="avg-header">{{reviewsArr.length}} Customer Reviews</div>
+				<div class="results-container">
+					<div stars data-rating='avgRating' data-max="reviewsObj.max" data-lock="static"></div> <div class="avg-copy">{{avgRating}} Average</div>
+				</div>
+				<div breakdown data-obj="reviewsObj"></div>
+				<div class="showAll link inline" ng-click="showOnly = 0">Show All Reviews</div>
+			</div>
+	</div>
+	<div class="reviews-wrapper col-xs-12 col-sm-7 col-md-8">
+		<div class="reviews-copy">REVIEWS <div class="filter-copy" ng-show="showOnly > 0"> filtered by {{showOnly}} star<div class="inline" ng-show="showOnly > 1">s</div> <div class="clearFilter link inline" ng-click="showOnly = 0">clear</div></div></div>
+		
+		<div reviews data-obj="rev" ng-show="!showOnly || (showOnly == rev.rating)" data-max="reviewsObj.max" ng-repeat="rev in reviewsObj.reviews"></div>
+	</div>
+</div>

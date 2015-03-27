@@ -1,0 +1,150 @@
+
+.reviews-wrapper {
+	float: left;
+	.reviews-copy {
+		font-size: 25px;
+		font-weight: 600;
+	}
+	.filter-copy {
+		font-size: 13px;
+		font-weight: 200;
+		color: #888;
+		display: inline;
+		div {
+			display: inline;
+		}
+		.clearFilter {
+
+		}
+	}
+}
+
+.review-wrapper {
+  position: relative;
+  border: thin solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 0 5px 0;
+  .title-copy {
+  	font-size: 13;
+  	font-weight: 600;
+  	margin: 5px 0;
+  }
+  .user-copy {
+  	font-style: italic;
+  }
+
+	.ratings-wrapper {
+		position: relative;
+	}
+}
+
+.stars-wrapper {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	&.static {
+		.star {
+			cursor: default;
+		}
+	}
+	.stars-fill {
+		@include transition-duration(500ms);
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 20px;
+		height: 25px;
+		background-color: $starColor;
+	}
+	.star {
+		position: relative;
+		float: left;
+		width: 25px;
+		height: 25px;
+		background: url(../images/star-empty.png) no-repeat;
+		cursor: pointer;
+	}
+}
+
+/* RESULTS CONTAINER START */
+.review-results {
+	position: relative;
+	float: right;
+	margin: 0 0 20px 0;
+	
+  .results-wrapper {
+  	border: thin solid #000;
+	  border-radius: 5px;
+	  margin: 35px 0 0 0;
+	  .showAll {
+	  	margin: 10px;
+	  }
+		.avg-header {
+		  background-color: #777;
+		  padding: 10px;
+		  color: #fff;
+		}
+	  .results-container {
+	  	position: relative;
+		  padding: 10px;
+	    display: flex;
+ 			align-items: center;
+
+ 			.avg-copy {
+ 				position: relative;
+ 				top: 2px;
+ 				left: 10px;
+ 			}
+	  }
+	}
+}
+
+.breakdown-wrapper {
+	position: relative;
+	padding: 10px;
+	width: 100%;
+
+	.filter-title {
+		font-size: 20;
+		font-weight: 600;
+		margin: 10px 0;
+	}
+	.breakdown-container {
+		margin: 0 0 5px 0;
+		.box {
+			position: relative;
+			border: thin solid #333;
+			display: inline-block;
+			width: 60%;
+			height: 20px;
+			.breakdown-fill {
+				@include transition-duration(500ms);
+				position: absolute;
+			  top: 0px;
+			  left: 0px;
+			  background-color: $starColor;
+			  width: 0px;
+			  height: 100%;
+			}
+		}
+		.box-copy {
+		  position: relative;
+			top: -6px;
+			display: inline-block;
+			&.bold {
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+/*  MISC  */
+.header-container {
+	width: 100%;
+	height: 150px;
+	background-color: #f7f7f7;
+	margin: 0 0 20px 0;
+	text-align: center;
+	color: #999;
+}
